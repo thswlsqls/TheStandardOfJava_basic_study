@@ -1,4 +1,4 @@
-class Ex6_1 { 
+class Ex6_1 { // public 메인 메서드가 있는 클래스명과 파일명이 일치해야 
 	public static void main(String args[]) { 
 		Tv t;                 // Tv인스턴스를 참조하기 위한 변수 t를 선언       
 		t = new Tv();         // Tv인스턴스를 생성한다. 

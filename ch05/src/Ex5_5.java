@@ -1,5 +1,6 @@
 class Ex5_5 { 
 	public static void main(String[] args) { 
+		// index : 0~44
 		int[] ball = new int[45];  // 45개의 정수값을 저장하기 위한 배열 생성.      
 
 		// 배열의 각 요소에 1~45의 값을 저장한다. 
