@@ -43,7 +43,10 @@ class Buyer {	// 고객, 물건을 사는 사람
 class Ex7_8 {
 	public static void main(String args[]) {
 		Buyer b = new Buyer();
-
+		
+//		Product p  = new Tv1();
+//		b.buy(p);
+		
 		b.buy(new Tv1());
 		b.buy(new Computer());
 

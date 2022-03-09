@@ -21,5 +21,6 @@ class Ex7_12 {
 	public static void main(String args[]) { 
 		System.out.println(InstanceInner.CONST); 
 		System.out.println(StaticInner.cv); 
+//		System.out.println(LocalInner.CONST); 에러, 지역 내부 클래스는 메서드 내에서만 사용할 수 있
 	} 
 }

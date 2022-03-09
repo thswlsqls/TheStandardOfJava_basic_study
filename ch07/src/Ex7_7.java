@@ -9,6 +9,14 @@ class Ex7_7 {
 //		car.water();
 		fe2 = (FireEngine)car; // 자손타입 ← 조상타입. 형변환 생략 불가
 		fe2.water();
+		
+//		FireEngine fe3 = (FireEngine)car;
+//		Car car2 = (Car)fe2;
+//		car2.dirive() -> null pointer오류 , 즉 실제 인스턴스가 중요
+		
+//		Car c = new Car();
+//		FireEngine fe4 = (FireEngine)c; // java.lang.ClassCastingException
+//		fe4.water(); // 컴파일 오케이 , 컴파일러가 속음  
 	}
 }
 

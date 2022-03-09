@@ -1,9 +1,13 @@
 public class Ex7_10 {
 	public static void main(String[] args) {
 		Unit[] group = { new Marine(), new Tank(), new Dropship() };
-
+//		Unit[] group = new Unit[3];
+//		group[0] = new Marine();
+//		group[1] = new Tank();
+//		group[2] = new Dropship();
+		
 		for (int i = 0; i < group.length; i++)
-			group[i].move(100, 200);
+			group[i].move(100, 200); // 마린, 탱크, 드랍십의 move를 호출
 	}
 }
 
@@ -34,3 +38,4 @@ class Dropship extends Unit { // 수송선
 	void load()   { /* 선택된 대상을 태운다. */ }
 	void unload() { /* 선택된 대상을 내린다. */ }
 }
+
