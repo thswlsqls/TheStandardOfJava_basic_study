@@ -14,6 +14,7 @@ class Ex10_4 {
 		date.add(Calendar.MONTH, -6);
 		System.out.println(toString(date));
 
+		//add()와 달리 roll()은 다른 필드에 영향을 주지 않는다. 
 		System.out.println("= 31일 후(roll) =");
 		date.roll(Calendar.DATE, 31);
 		System.out.println(toString(date));

@@ -8,15 +8,15 @@ class Ex10_5 {
 		} 
 		int year  = Integer.parseInt(args[0]); 
 		int month = Integer.parseInt(args[1]); 
-		int START_DAY_OF_WEEK = 0; 
-		int END_DAY = 0; 
+		int START_DAY_OF_WEEK = 0; // 1일의 요일 
+		int END_DAY = 0; // 마지막날 
 
 		Calendar sDay = Calendar.getInstance(); // 시작일 
 		Calendar eDay = Calendar.getInstance(); // 끝일 
 
 		// 월의 경우 0부터 11까지의 값을 가지므로 1을 빼주어야 한다. 
 		// 예를 들어, 2019년 11월 1일은 sDay.set(2019, 10, 1);과 같이 해줘야 한다. 
-  		sDay.set(year, month-1, 1);       
+  		sDay.set(year, month-1, 1);  //month는 0부터 시작       
 		eDay.set(year, month, 1); 
 
 		// 다음달의 첫날(12월 1일)에서 하루를 빼면 현재달의 마지막 날(11월 30일)이 된다. 
