@@ -2,7 +2,10 @@ import java.util.*;
 
 class Ex11_1 {
 	public static void main(String[] args) {
+		// 기본 길이(용량, capacity)가 10인 ArrayList를 생성
 		ArrayList list1 = new ArrayList(10);
+		// ArrayList에는 객체만 저장가능함
+		// aytoboxing에 의해 기본형이 참조형으로 자동 변환
 		list1.add(new Integer(5));
 		list1.add(new Integer(4));
 		list1.add(new Integer(2));
@@ -10,9 +13,11 @@ class Ex11_1 {
 		list1.add(new Integer(1));
 		list1.add(new Integer(3));
 
+		// list1.subList(1,4) -> 1 <= x < 4
 		ArrayList list2 = new ArrayList(list1.subList(1,4)); 
 		print(list1, list2);
 
+		// Collection은 인터페이스, Collections는 유틸 클래스 
 		Collections.sort(list1);	// list1과 list2를 정렬한다.
 		Collections.sort(list2);	// Collections.sort(List l)
 		print(list1, list2);
@@ -28,6 +33,14 @@ class Ex11_1 {
 		list2.set(3, "AA");
 		print(list1, list2);
 
+		list1.add(0, "1");
+		print(list1, list2);
+		// indexOf()는 지정된 객체의 위치(인덱스)를 알려줌.
+		System.out.println("index=" + list1.indexOf(1));
+		list1.remove(5); // 인덱스가 5인 객체를 삭제함
+		list1.remove(new Integer(1)); // 1을 삭제함 
+		
+		
 		// list1에서 list2와 겹치는 부분만 남기고 나머지는 삭제한다.
 		System.out.println("list1.retainAll(list2):" + list1.retainAll(list2));
 

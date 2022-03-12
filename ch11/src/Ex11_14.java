@@ -2,7 +2,7 @@ import java.util.*;
 
 class Ex11_14 {
 	public static void main(String[] args) {
-		TreeSet set = new TreeSet();
+		TreeSet set = new TreeSet(); //범위 검색에 유리함, (from-to);
 
 		String from = "b";
 		String to	= "d";

@@ -13,9 +13,19 @@ class Ex11_12 {
 		System.out.println("A = "+setA);
 
 		setB.add("4");	 setB.add("5");  setB.add("6");		
-      setB.add("7");  setB.add("8");
+        setB.add("7");  setB.add("8");
 		System.out.println("B = "+setB);
-
+		
+		// êµì§‘í•©
+//		setA.retainAll(setB); // êµì§‘í•©, ê³µí†µëœ ìš”ì†Œë§Œ ë‚¨ê¸°ê³  ì‚­ì œ 
+//		System.out.println(setA);
+//		System.out.println(setA.addAll(setB)); // í•©ì§‘í•©, setBì˜ ëª¨ë“  ìš”ì†Œë¥¼ ì¶”ê°€(ì¤‘ë³µ ì œì™¸)
+//		System.out.println("í•© : "+setA);
+		System.out.println(setA.removeAll(setB)); // ì°¨ì§‘í•©, setBì™€ ê³µí†µ ìš”ì†Œë¥¼ ì œê±°í•¨ 
+		System.out.println("ì°¨ : "  +setA);
+//		System.out.println(setA);
+		
+		
 		Iterator it = setB.iterator();
 		while(it.hasNext()) {
 			Object tmp = it.next();
@@ -38,8 +48,8 @@ class Ex11_12 {
 		while(it.hasNext())
 			setHab.add(it.next());
 
-		System.out.println("A ¡û B = " + setKyo);  // ÇÑ±Û ¤§À» ´©¸£°í ÇÑÀÚÅ°
-		System.out.println("A U B = " + setHab);  // ÇÑ±Û ¤§À» ´©¸£°í ÇÑÀÚÅ°
+		System.out.println("A ï¿½ï¿½ B = " + setKyo);  // ï¿½Ñ±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Å°
+		System.out.println("A U B = " + setHab);  // ï¿½Ñ±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Å°
 		System.out.println("A - B = " + setCha); 
 	}
 }
