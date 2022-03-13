@@ -1,0 +1,37 @@
+
+abstract class Unit2 {
+	int x, y;
+	abstract void move(int x, int y);
+	void stop() {System.out.println("멈춥니다.");}
+}
+
+interface Fitable{
+	
+	void move(int x, int y); // public abstract 생
+	void attack(Fightable f); // public abstract 생
+}
+
+
+interface Fightable {
+	void move(int x, int y); // public abstract가 생략됨
+	void attack(Fightable f); // public abstract가 생략
+}
+
+class Fighter extends Unit2 implements Fitable {
+	
+	public void move(int x, int y) {
+		System.out.println("["+x+","+y+"]로 이동 ");
+	}
+	public void attack(Fightable f) {
+		System.out.println(f+"를 공");
+	}
+}
+
+public class FighterTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
