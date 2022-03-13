@@ -2,7 +2,7 @@ import java.lang.annotation.*;
 
 @Deprecated
 @SuppressWarnings("1111") // 유효하지 않은 애너테이션은 무시된다.
-@TestInfo(testedBy="aaa", testDate=@DateTime(yymmdd="160101",hhmmss="235959"))
+@TestInfo(testedBy="aaa", testTools={"JUnit", "JUnit5"}, testDate=@DateTime(yymmdd="160101",hhmmss="235959"))
 class Ex12_8 {
 	public static void main(String args[]) {
 		// Ex12_8의 Class객체를 얻는다.

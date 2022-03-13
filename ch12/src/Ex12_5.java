@@ -1,4 +1,5 @@
 enum Direction { EAST, SOUTH, WEST, NORTH }
+				// 0	 1	   2	 3
 
 class Ex12_5 {
 	public static void main(String[] args) {
@@ -13,12 +14,12 @@ class Ex12_5 {
 		System.out.println("d1==d2 ? "+ (d1==d2));
 		System.out.println("d1==d3 ? "+ (d1==d3));
 		System.out.println("d1.equals(d3) ? "+ d1.equals(d3));
-//		System.out.println("d2 > d3 ? "+ (d1 > d3)); // ¿¡·¯
+//		System.out.println("d2 > d3 ? "+ (d1 > d3)); // ï¿½ï¿½ï¿½ï¿½
 		System.out.println("d1.compareTo(d3) ? "+ (d1.compareTo(d3)));
 		System.out.println("d1.compareTo(d2) ? "+ (d1.compareTo(d2)));
 
 		switch(d1) {
-			case EAST: // Direction.EAST¶ó°í ¾µ ¼ö ¾ø´Ù.
+			case EAST: // Direction.EASTï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 				System.out.println("The direction is EAST."); break;
 			case SOUTH:
 				System.out.println("The direction is SOUTH."); break;

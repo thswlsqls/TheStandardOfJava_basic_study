@@ -4,11 +4,17 @@ class Ex13_9 {
 	public static void main(String[] args) throws Exception {
 		ThreadEx9_1 th1 = new ThreadEx9_1();
 		th1.start();
-
-		String input = JOptionPane.showInputDialog("¾Æ¹« °ªÀÌ³ª ÀÔ·ÂÇÏ¼¼¿ä."); 
-		System.out.println("ÀÔ·ÂÇÏ½Å °ªÀº " + input + "ÀÔ´Ï´Ù.");
-		th1.interrupt();  // interrupt()¸¦ È£ÃâÇÏ¸é, interrupted»óÅÂ°¡ true°¡ µÈ´Ù.
+		
+		System.out.println("isInterrupted():"+th1.isInterrupted()); // false
+		String input = JOptionPane.showInputDialog("ï¿½Æ¹ï¿½ ï¿½ï¿½ï¿½Ì³ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½."); 
+		
+		System.out.println("ï¿½Ô·ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½ï¿½ " + input + "ï¿½Ô´Ï´ï¿½.");
+		th1.interrupt();  // interrupt()ï¿½ï¿½ È£ï¿½ï¿½ï¿½Ï¸ï¿½, interruptedï¿½ï¿½ï¿½Â°ï¿½ trueï¿½ï¿½ ï¿½È´ï¿½.
 		System.out.println("isInterrupted():"+ th1.isInterrupted()); // true
+		System.out.println("isInterrupted():"+ th1.isInterrupted()); // true
+		
+		// main ì“°ë ˆë“œê°€ interruptë˜ì—ˆëŠ”ì§€ í™•ì¸ 
+		System.out.println("interrupted():"+ Thread.interrupted()); // false
 	}
 }
 
@@ -18,8 +24,13 @@ class ThreadEx9_1 extends Thread {
 
 		while(i!=0 && !isInterrupted()) {
 			System.out.println(i--);
-			for(long x=0;x<2500000000L;x++); // ½Ã°£ Áö¿¬
+			for(long x=0;x<2500000000L;x++); // ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½
 		}
-		System.out.println("Ä«¿îÆ®°¡ Á¾·áµÇ¾ú½À´Ï´Ù.");
+//		System.out.println("Ä«ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+		System.out.println("isInterrupted():"+ this.isInterrupted()); // true
+		System.out.println("isInterrupted():"+ this.isInterrupted()); // true
+		System.out.println("Interrupted():"+ Thread.interrupted()); // true
+		
+	
 	} 
 }

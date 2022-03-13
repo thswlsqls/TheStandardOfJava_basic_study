@@ -2,8 +2,8 @@ class Ex13_7 implements Runnable  {
 	static boolean autoSave = false;
 
 	public static void main(String[] args) {
-		Thread t = new Thread(new Ex13_7());
-		t.setDaemon(true);		// ÀÌ ºÎºÐÀÌ ¾øÀ¸¸é Á¾·áµÇÁö ¾Ê´Â´Ù.
+		Thread t = new Thread(new Ex13_7()); // Thread(Runnable r)
+		t.setDaemon(true);		// ï¿½ï¿½ ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´ï¿½.
 		t.start();
 
 		for(int i=1; i <= 10; i++) {
@@ -15,21 +15,21 @@ class Ex13_7 implements Runnable  {
 			if(i==5) autoSave = true;
 		}
 
-		System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+		System.out.println("ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
 	}
 
 	public void run() {
 		while(true) {
 			try { 
-				Thread.sleep(3 * 1000); // 3ÃÊ¸¶´Ù
+				Thread.sleep(3 * 1000); // 3ï¿½Ê¸ï¿½ï¿½ï¿½
 			} catch(InterruptedException e) {}
 
-			// autoSaveÀÇ °ªÀÌ trueÀÌ¸é autoSave()¸¦ È£ÃâÇÑ´Ù.
+			// autoSaveï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ trueï¿½Ì¸ï¿½ autoSave()ï¿½ï¿½ È£ï¿½ï¿½ï¿½Ñ´ï¿½.
 			if(autoSave) autoSave();
 		}
 	}
 
 	public void autoSave() {
-		System.out.println("ÀÛ¾÷ÆÄÀÏÀÌ ÀÚµ¿ÀúÀåµÇ¾ú½À´Ï´Ù.");
+		System.out.println("ï¿½Û¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 	}
 }

@@ -8,17 +8,18 @@ class Ex12_1 {
 	public static void main(String[] args) {
 		ArrayList<Product> productList = new ArrayList<Product>();
 		ArrayList<Tv>      tvList = new ArrayList<Tv>();
-//  	ArrayList<Product> tvList = new ArrayList<Tv>(); // ¿¡·¯.
-// 		List<Tv>           tvList = new ArrayList<Tv>(); // OK. ´ÙÇü¼º
+//  	ArrayList<Product> tvList = new ArrayList<Tv>(); // ï¿½ï¿½ï¿½ï¿½.
+// 		List<Tv>           tvList = new ArrayList<Tv>(); // OK. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 		productList.add(new Tv());
 		productList.add(new Audio());
 
 		tvList.add(new Tv());
 		tvList.add(new Tv());
+//		tvList.add(new Audio()); // Tvë˜ëŠ” ê·¸ ìì† ê°ì²´ë§Œ ê°€ëŠ¥í•¨ 
 
 		printAll(productList);
-		// printAll(tvList); // ÄÄÆÄÀÏ ¿¡·¯°¡ ¹ß»ıÇÑ´Ù.
+		// printAll(tvList); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½ï¿½Ñ´ï¿½.
 	}
 
 	public static void printAll(ArrayList<Product> list) {

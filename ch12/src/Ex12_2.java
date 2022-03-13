@@ -3,16 +3,26 @@ import java.util.*;
 class Ex12_2 {
 	public static void main(String[] args) {
 		ArrayList<Student> list = new ArrayList<Student>();
-		list.add(new Student("ÀÚ¹Ù¿Õ", 1, 1));
-		list.add(new Student("ÀÚ¹ÙÂ¯", 1, 2));
-		list.add(new Student("È«±æµ¿", 2, 1));
+//		list.add(new Student("ï¿½Ú¹Ù¿ï¿½", 1, 1));
+//		list.add(new Student("ï¿½Ú¹ï¿½Â¯", 1, 2));
+//		list.add(new Student("È«ï¿½æµ¿", 2, 1));
 
-		Iterator<Student> it = list.iterator();
-		while (it.hasNext()) {
-		//  Student s = (Student)it.next(); // Áö³×¸¯½º¸¦ »ç¿ëÇÏÁö ¾ÊÀ¸¸é Çüº¯È¯ ÇÊ¿ä.
-			Student s = it.next();
-			System.out.println(s.name);
-		}
+//		Iterator it = list.iterator();		
+//		Iterator<Student> it = list.iterator();
+//		while (it.hasNext()) {
+//		//  Student s = (Student)it.next(); // ï¿½ï¿½ï¿½×¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È¯ ï¿½Ê¿ï¿½.
+//			Student s = it.next();
+//			System.out.println(s.name);
+//		}
+		HashMap<String, Student> map = new HashMap<>();
+		map.put("ìë°”ì™•", new Student("ìë°”ì™•", 1, 1, 100, 100, 100));
+		
+		//	public V get(Object key) { ... }
+		// public Student get(String key) { ... }
+		Student s = (Student)map.get("ìë°”ì™•"); 
+		
+		System.out.println(map);
+		System.out.println(s.name);
 	} // main
 }
 
@@ -20,10 +30,16 @@ class Student {
 	String name = "";
 	int ban;
 	int no;
-
-	Student(String name, int ban, int no) {
+	int kor;
+	int eng;
+	int math;
+	
+	Student(String name, int ban, int no, int kor, int eng, int math) {
 		this.name = name;
 		this.ban = ban;
 		this.no = no;
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
 	}
 }

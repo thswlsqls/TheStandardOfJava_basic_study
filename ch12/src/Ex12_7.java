@@ -3,6 +3,20 @@ class Parent {
 }
 
 class Child extends Parent {
+	
 	@Override
-	void parentmethod() { } // Á¶»ó ¸Ş¼­µåÀÇ ÀÌ¸§À» Àß¸ø Àû¾úÀ½. 
+	void parentMethod() { } // ï¿½ï¿½ï¿½ï¿½ ï¿½Ş¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½. 
+}
+
+@FunctionalInterface // í•¨ìˆ˜í˜• ì¸í„°í˜ì´ìŠ¤ëŠ” í•˜ë‚˜ì˜ ì¶”ìƒë©”ì„œë“œë§Œ ê°€ëŠ¥ 
+interface Testable {
+	void test(); // ì¶”ìƒë©”ì„œë“œ 
+//	void check(); // ì¶”ìƒë©”ì„œë“œ 
+}
+
+class Ex12_7 {
+	public static void main(String[] args) {
+		Child c = new Child();
+		c.parentMethod();
+	}
 }

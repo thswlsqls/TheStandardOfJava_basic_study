@@ -14,19 +14,36 @@ class Ex12_3 {
 		FruitBox<Fruit> fruitBox = new FruitBox<Fruit>();
 		FruitBox<Apple> appleBox = new FruitBox<Apple>();
 		FruitBox<Grape> grapeBox = new FruitBox<Grape>();
-//		FruitBox<Grape> grapeBox = new FruitBox<Apple>(); // ¿¡·¯. Å¸ÀÔ ºÒÀÏÄ¡
-//		FruitBox<Toy>   toyBox   = new FruitBox<Toy>();   // ¿¡·¯.
+//		FruitBox<Grape> grapeBox = new FruitBox<Apple>(); // ï¿½ï¿½ï¿½ï¿½. Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ä¡
+//		FruitBox<Toy>   toyBox   = new FruitBox<Toy>();   // ï¿½ï¿½ï¿½ï¿½.
 
 		fruitBox.add(new Fruit());
 		fruitBox.add(new Apple());
 		fruitBox.add(new Grape());
 		appleBox.add(new Apple());
-//		appleBox.add(new Grape());  // ¿¡·¯. Grape´Â AppleÀÇ ÀÚ¼ÕÀÌ ¾Æ´Ô
+//		appleBox.add(new Grape());  // ï¿½ï¿½ï¿½ï¿½. Grapeï¿½ï¿½ Appleï¿½ï¿½ ï¿½Ú¼ï¿½ï¿½ï¿½ ï¿½Æ´ï¿½
 		grapeBox.add(new Grape());
 
 		System.out.println("fruitBox-"+fruitBox);
 		System.out.println("appleBox-"+appleBox);
 		System.out.println("grapeBox-"+grapeBox);
+	
+		Box b = new Box<String>();
+		b.add(new Integer(100));
+		
+		Box<String> bStr = null;
+		
+		b = (Box)bStr; // Box<String> -> Box ê°€ëŠ¥ but ê²½ê³  
+		bStr = (Box<String>) b; // Box -> Box<String> ê°€ëŠ¥ but ê²½ê³  
+	
+		FruitBox<Fruit> box = new FruitBox<Fruit>();
+		FruitBox<Apple> abox = new FruitBox<Apple>();
+
+		FruitBox<? extends Fruit> Ifbox = (FruitBox<? extends Fruit>) new FruitBox<Apple>();
+		FruitBox<? extends Fruit> abox2 = new FruitBox<Apple>();
+		
+		
+	
 	}  // main
 }
 
