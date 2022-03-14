@@ -6,15 +6,20 @@ class Ex14_4 {
 		for(int i=0;i<10;i++)
 			list.add(i);
 
-		// listÀÇ ¸ðµç ¿ä¼Ò¸¦ Ãâ·Â
+		// listì˜ ëª¨ë“  ìš”ì†Œë¥¼ ì¶œë ¥ 
 		list.forEach(i->System.out.print(i+","));
 		System.out.println();
-
-		// list¿¡¼­ 2 ¶Ç´Â 3ÀÇ ¹è¼ö¸¦ Á¦°ÅÇÑ´Ù.
+		Iterator it = list.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
+		System.out.println();
+		
+		// listì—ì„œ 2 ë˜ëŠ” 3ì˜ ë°°ìˆ˜ë¥¼ ì œê±°í•œë‹¤.
 		list.removeIf(x-> x%2==0 || x%3==0);
 		System.out.println(list);
 
-		list.replaceAll(i->i*10); // listÀÇ °¢ ¿ä¼Ò¿¡ 10À» °öÇÑ´Ù.
+		list.replaceAll(i->i*10); // listï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ò¿ï¿½ 10ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ´ï¿½.
 		System.out.println(list);
 
 		Map<String, String> map = new HashMap<>();
@@ -23,7 +28,7 @@ class Ex14_4 {
 		map.put("3", "3");
 		map.put("4", "4");
 
-		// mapÀÇ ¸ðµç ¿ä¼Ò¸¦ {k,v}ÀÇ Çü½ÄÀ¸·Î Ãâ·ÂÇÑ´Ù.
+		// mapï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ {k,v}ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 		map.forEach((k,v)-> System.out.print("{"+k+","+v+"},"));
 		System.out.println();
 	}
