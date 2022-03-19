@@ -23,7 +23,7 @@ class Ex14_7 {
 		};
 
 		Stream<String> lineStream = Arrays.stream(lineArr);
-		lineStream.flatMap(line -> Stream.of(line.split(" +")))
+		lineStream.flatMap(line -> Stream.of(line.split(" +"))) // 정규식, 하나이상의 공백을 의미함.
 			.map(String::toLowerCase)
 			.distinct()
 			.sorted()

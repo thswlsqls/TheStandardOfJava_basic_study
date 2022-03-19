@@ -21,8 +21,8 @@ class Ex14_8 {
 		Optional.of("456").map(Integer::parseInt)
 					      .ifPresent(x->System.out.printf("result3=%d%n",x));
 
-		OptionalInt optInt1  = OptionalInt.of(0);   // 0À» ÀúÀå
-		OptionalInt optInt2  = OptionalInt.empty(); // ºó °´Ã¼¸¦ »ı¼º
+		OptionalInt optInt1  = OptionalInt.of(0);   // 0ì„ ì €ì¥ isPresent:true
+		OptionalInt optInt2  = OptionalInt.empty(); // ë¹ˆ ê°ì²´ë¥¼ ìƒì„± isPresent: false
 
 		System.out.println(optInt1.isPresent());   // true
 		System.out.println(optInt2.isPresent());   // false
