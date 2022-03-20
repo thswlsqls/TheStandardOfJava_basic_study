@@ -45,7 +45,6 @@ class Ex14_11 {
 			new Student3("안지미", false, 1, 2,  50),	
 			new Student3("황지미", false, 1, 3, 100),	
 			new Student3("강지미", false, 1, 3, 150),	
-// 뒷 페이지에 계속됩니다.
 			new Student3("이자바", true,  1, 3, 200),	
 			new Student3("나자바", true,  2, 1, 300),	
 			new Student3("김지미", false, 2, 1, 250),	
